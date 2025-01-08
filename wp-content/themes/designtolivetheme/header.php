@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ceramic</title>
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <?php wp_head(); ?>
+</head>
+
+<body class="md:mx-2 font-customFont">
+    <!--Navbar section-->
+    <nav class="bg-white p-4">
+        <!-- Mobile Menu Button -->
+        <div class="flex justify-between items-center md:hidden">
+            <a href="#" class="text-2xl text-amber-700"><i class="fa-solid fa-bars" id="menu-toggle"></i></a>
+            <a href="#" class="text-black text-2xl"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Logo" /></a>
+        </div>
+        <!-- Desktop Menu -->
+        <div
+            class="container mx-auto hidden md:flex justify-between items-center">
+            <a href="#" class="text-black text-2xl ml-44"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Logo" /></a>
+            <ul class="flex space-x-6 mr-44">
+                <li>
+                    <a
+                        href="#"
+                        class="text-black p-4 hover:border-b-2 hover:border-amber-800">SHOP</a>
+                </li>
+                <li>
+                    <a
+                        href="#"
+                        class="text-black p-4 hover:border-b-2 hover:border-amber-800">WORKSHOP</a>
+                </li>
+                <li>
+                    <a
+                        href="#"
+                        class="text-black p-4 hover:border-b-2 hover:border-amber-800">BLOG</a>
+                </li>
+                <li>
+                    <a
+                        href="#"
+                        class="text-black p-4 hover:border-b-2 hover:border-amber-800">CONTACT</a>
+                </li>
+                <li>
+                    <a href="#" class="text-gray-800"><i class="text-amber-800 fa-solid fa-cart-shopping"></i></a>
+                </li>
+            </ul>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden flex-col space-y-4 mt-4 md:hidden">
+            <ul
+                class="py-2 text-sm text-black dark:text-amber-800"
+                aria-labelledby="dropdownDefaultButton">
+                <li>
+                    <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-amber-600 dark:hover:text-white">SHOP</a>
+                </li>
+                <li>
+                    <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-amber-600 dark:hover:text-white">WORKSHOP</a>
+                </li>
+                <li>
+                    <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-amber-600 dark:hover:text-white">BLOG</a>
+                </li>
+                <li>
+                    <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-amber-600 dark:hover:text-white">CONTACT</a>
+                </li>
+                <li>
+                    <a href="#" class="block px-4 py-2 text-gray-800"><i class="text-amber-800 fa-solid fa-cart-shopping"></i></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!--end of navbar section-->
+    <!--header section-->
