@@ -84,3 +84,12 @@ our section
         updateCarousel();
       });
     </script> -->
+
+<!--
+header.php ma header ko part rakney , ani call garna lai get_header(); use garney
+
+<?php wp_head(); ?> header.php ko </head> aagadi call garnun parxa.
+
+footer.php ma header ko part rakney , ani call garna lai get_footer(); use garney
+<?php wp_footer(); ?> footer.php ko </body> aagadi call garnu parxa.
+-->
