@@ -5,13 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ceramic</title>
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
-        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer" />
-    <script src="https://cdn.tailwindcss.com"></script>
+
     <?php wp_head(); ?>
 </head>
 
@@ -23,11 +17,44 @@
             <a href="#" class="text-2xl text-amber-700"><i class="fa-solid fa-bars" id="menu-toggle"></i></a>
             <a href="#" class="text-black text-2xl"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Logo" /></a>
         </div>
+
+
+
         <!-- Desktop Menu -->
         <div
             class="container mx-auto hidden md:flex justify-between items-center">
             <a href="#" class="text-black text-2xl ml-44"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Logo" /></a>
-            <ul class="flex space-x-6 mr-44">
+
+
+
+            <?php
+            wp_nav_menu(
+                array(
+                    'menu' => 'primary',
+                    'theme_location' => 'primary',
+                    'menu_class' => 'flex space-x-6 mr-44',
+                    'items_wrap' => '<ul class="%2$s">%3$s</ul>',
+                    'container_class' => 'hidden md:flex justify-between items-center' // this is the class that is added to the container div
+
+                )
+            )
+            ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- <ul class="flex space-x-6 mr-44">
                 <li>
                     <a
                         href="#"
@@ -51,11 +78,29 @@
                 <li>
                     <a href="#" class="text-gray-800"><i class="text-amber-800 fa-solid fa-cart-shopping"></i></a>
                 </li>
-            </ul>
+            </ul> -->
         </div>
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden flex-col space-y-4 mt-4 md:hidden">
-            <ul
+
+
+
+            <?php
+
+            wp_nav_menu(
+                array(
+                    'menu' => 'mobile',
+                    'theme_location' => 'mobile',
+                    'menu_class' => 'py-2 text-sm text-black dark:text-amber-800',
+                    'items_wrap' => '<ul class="">%3$s</ul>',
+                    'container_class' => 'md:flex justify-between items-center' // this is the class that is added to the container div
+
+                )
+            )
+
+            ?>
+
+            <!-- <ul
                 class="py-2 text-sm text-black dark:text-amber-800"
                 aria-labelledby="dropdownDefaultButton">
                 <li>
@@ -81,7 +126,7 @@
                 <li>
                     <a href="#" class="block px-4 py-2 text-gray-800"><i class="text-amber-800 fa-solid fa-cart-shopping"></i></a>
                 </li>
-            </ul>
+            </ul> -->
         </div>
     </nav>
 

@@ -314,7 +314,7 @@ get_header();
 <div
     class="relative md:h-screen h-[500px] bg-slate-100 flex justify-center items-center md:mt-0 md:mb-0 md:p-2">
     <img
-        src="images/Ceramic2.jpg"
+        src="<?php echo get_template_directory_uri(); ?>/images/Ceramic2.jpg"
         alt="hero image"
         class="absolute inset-0 w-full h-full object-cover z-0" />
     <!-- Dark overlay -->
