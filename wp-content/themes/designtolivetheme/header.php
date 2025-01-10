@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ceramic</title>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
     <?php wp_head(); ?>
 </head>
 
@@ -15,7 +15,17 @@
         <!-- Mobile Menu Button -->
         <div class="flex justify-between items-center md:hidden">
             <a href="#" class="text-2xl text-amber-700"><i class="fa-solid fa-bars" id="menu-toggle"></i></a>
-            <a href="#" class="text-black text-2xl"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Logo" /></a>
+            <a href="#" class="text-black text-2xl">
+
+                <?php
+                if (function_exists('the_custom_logo')) {
+                    $custom_logo_id = get_theme_mod('custom_logo');
+                    $logo = wp_get_attachment_image_src($custom_logo_id);
+                }
+                ?>
+
+
+                <img src="<?php echo $logo[0]; ?>" alt="Logo" /></a>
         </div>
 
 
@@ -23,7 +33,16 @@
         <!-- Desktop Menu -->
         <div
             class="container mx-auto hidden md:flex justify-between items-center">
-            <a href="#" class="text-black text-2xl ml-44"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Logo" /></a>
+            <a href="#" class="text-black text-2xl ml-44">
+                <?php
+                if (function_exists('the_custom_logo')) {
+                    $custom_logo_id = get_theme_mod('custom_logo');
+                    $logo = wp_get_attachment_image_src($custom_logo_id);
+                }
+                ?>
+
+                <img src="<?php echo $logo[0]; ?>" alt="Logo" />
+            </a>
 
 
 

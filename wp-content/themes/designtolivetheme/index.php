@@ -6,7 +6,7 @@ get_header();
 <div
     class="relative md:h-screen h-[500px] bg-slate-100 flex justify-center items-center md:mt-0 md:mb-0 md:p-2">
     <img
-        src="<?php echo get_template_directory_uri(); ?>/images/Ceramic.jpg"
+        src="<?php echo get_theme_mod('custom_banner_image_control_setting') ?>"
         alt="ceramic image"
         class="absolute inset-0 w-full h-full object-cover z-0" />
     <div class="absolute inset-0 bg-black opacity-50"></div>
@@ -14,12 +14,10 @@ get_header();
     <div
         class="relative z-10 flex flex-col items-center justify-center space-y-6 md:w-2/6 w-full p-6">
         <h1 class="md:text-4xl text-3xl md:font-bold font-medium text-white">
-            Ceramics Studio
+            <?php echo get_theme_mod('custom_banner_title_settings'); ?>
         </h1>
         <p class="md:text-xl text-sm text-center text-slate-200">
-            Lorem Ipsum has been the industry's standard dummy text ever since the
-            1500s, when an unknown printer took a galley of type and scrambled it
-            to make a type specimen book
+            <?php echo get_theme_mod('custom_banner_content_settings'); ?>
         </p>
         <button
             class="px-7 py-3 bg-amber-800 md:text-xl text-sm text-white hover:bg-red-800">
@@ -33,7 +31,7 @@ get_header();
 <div
     class="flex flex-col items-center justify-center md:px-24 md:py-24 py-10 space-y-6 md:h-screen md:mt-0 md:mb-0 md:p-2">
     <h2 class="md:text-4xl text-3xl font-medium md:font-bold text-gray-700">
-        Bestsellery
+        <?php echo get_theme_mod('custom_sellery_title_settings'); ?>
     </h2>
 
     <div
@@ -42,13 +40,13 @@ get_header();
             class="flex flex-col items-stretch md:w-1/4 h-full border-b hover:shadow-md">
             <div class="flex w-full h-full">
                 <img
-                    src="<?php echo get_template_directory_uri(); ?>/images/moonplate.png"
+                    src="<?php echo get_theme_mod('custom_sellery_image1_control_setting') ?>"
                     alt="card image"
                     class="w-full h-full object-cover" />
             </div>
             <div class="flex flex-col justify-start w-full text-xl p-2">
-                <p class="md:text-xl font-medium text-sm">Moon plate</p>
-                <p class="md:text-xl text-sm">75$</p>
+                <p class="md:text-xl font-medium text-sm"><?php echo get_theme_mod('custom_sellery_content1_settings') ?></p>
+                <p class="md:text-xl text-sm"><?php echo get_theme_mod('custom_sellery_content1_settings') ?>$</p>
             </div>
         </div>
 
@@ -56,13 +54,13 @@ get_header();
             class="flex flex-col items-stretch md:w-1/4 h-full border-b hover:shadow-md">
             <div class="flex w-full h-full">
                 <img
-                    src="<?php echo get_template_directory_uri(); ?>/images/silverset.png"
+                    src="<?php get_theme_mod('custom_sellery_image2_control_setting') ?>"
                     alt="card image"
                     class="w-full h-full object-cover" />
             </div>
             <div class="flex flex-col justify-start w-full text-xl p-2">
-                <p class="md:text-xl font-medium text-sm">Silver Set</p>
-                <p class="md:text-xl text-sm">125$</p>
+                <p class="md:text-xl font-medium text-sm"><?php echo get_theme_mod('custom_sellery_content2_settings') ?></p>
+                <p class="md:text-xl text-sm"><?php echo get_theme_mod('custom_sellery_content2_settings') ?>$</p>
             </div>
         </div>
 
@@ -70,13 +68,13 @@ get_header();
             class="flex flex-col items-stretch md:w-1/4 h-full border-b hover:shadow-md">
             <div class="flex w-full h-full">
                 <img
-                    src="<?php echo get_template_directory_uri(); ?>/images/nordic.png"
+                    src="<?php get_theme_mod('custom_sellery_image3_control_setting') ?>"
                     alt="card image"
                     class="w-full h-full object-cover" />
             </div>
             <div class="flex flex-col justify-start w-full text-xl p-2">
-                <p class="md:text-xl font-medium text-sm">Nordic Container</p>
-                <p class="md:text-xl text-sm">90$</p>
+                <p class="md:text-xl font-medium text-sm"><?php echo get_theme_mod('custom_sellery_content3_settings') ?></p>
+                <p class="md:text-xl text-sm"><?php echo get_theme_mod('custom_sellery_content3_settings') ?>$</p>
             </div>
         </div>
     </div>
