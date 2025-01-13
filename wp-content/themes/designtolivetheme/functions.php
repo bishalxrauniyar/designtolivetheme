@@ -1,18 +1,18 @@
 <?php
-//custome theme customizers
+//custome theme customizers......................................................................................................................
 
 
 function custom_theme_panel_settings($wp_customize)
 {
     // Title area
     $wp_customize->add_section('custom_banner_section_area', array(
-        'title' => __('Custom Banner Settings', 'designtolive'),
+        'title' => __('Custom Banner Settings'),
     ));
     $wp_customize->add_setting('custom_banner_title_settings', array(
         'default' => 'Design to Live',
     ));
     $wp_customize->add_control('custom_banner_title_control', array(
-        'label' => __('Enter Title', 'designtolive'),
+        'label' => __('Enter Title'),
         'section' => 'custom_banner_section_area',
         'settings' => 'custom_banner_title_settings',
     ));
@@ -22,7 +22,7 @@ function custom_theme_panel_settings($wp_customize)
         'default' => "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
     ));
     $wp_customize->add_control('custom_banner_content_settings', array(
-        'label' => __('Provide Content', 'designtolive'),
+        'label' => __('Provide Content'),
         'section' => 'custom_banner_section_area',
         'settings' => 'custom_banner_content_settings',
         'type' => 'textarea',
@@ -34,15 +34,19 @@ function custom_theme_panel_settings($wp_customize)
         $wp_customize,
         'custom_banner_image_control',
         array(
-            'label' => __('Upload Image', 'designtolive'),
+            'label' => __('Upload Image'),
             'section' => 'custom_banner_section_area',
             'settings' => 'custom_banner_image_control_setting',
         )
     ));
 
+
+
+
+
     // Sellery section
     $wp_customize->add_section('custom_sellery_section_area', array(
-        'title' => __('Custom Sellery Settings', 'designtolive'),
+        'title' => __('Custom Sellery Settings'),
     ));
 
     // Sellery title
@@ -50,7 +54,7 @@ function custom_theme_panel_settings($wp_customize)
         'default' => 'Sellery',
     ));
     $wp_customize->add_control('custom_sellery_title_control', array(
-        'label' => __('Enter Title', 'designtolive'),
+        'label' => __('Enter Title'),
         'section' => 'custom_sellery_section_area',
         'settings' => 'custom_sellery_title_settings',
     ));
@@ -61,7 +65,7 @@ function custom_theme_panel_settings($wp_customize)
         $wp_customize,
         "custom_sellery_image1_control",
         array(
-            'label' => __("Upload Image 1", 'designtolive'),
+            'label' => __("Upload Image 1"),
             'section' => 'custom_sellery_section_area',
             'settings' => "custom_sellery_image1_control_setting",
         )
@@ -70,7 +74,7 @@ function custom_theme_panel_settings($wp_customize)
         'default' => "MoonPlate",
     ));
     $wp_customize->add_control("custom_sellery_content1_control", array(
-        'label' => __("Provide Item Name 1", 'designtolive'),
+        'label' => __("Provide Item Name 1"),
         'section' => 'custom_sellery_section_area',
         'settings' => "custom_sellery_content1_settings",
         'type' => 'textarea',
@@ -79,11 +83,13 @@ function custom_theme_panel_settings($wp_customize)
         'default' => "120$",
     ));
     $wp_customize->add_control("custom_sellery_price1_control", array(
-        'label' => __("Provide Item Price 1", 'designtolive'),
+        'label' => __("Provide Item Price 1"),
         'section' => 'custom_sellery_section_area',
         'settings' => "custom_sellery_price1_settings",
         'type' => 'textarea',
     ));
+
+
 
     // Sellery Item 2
     $wp_customize->add_setting("custom_sellery_image2_control_setting");
@@ -91,7 +97,7 @@ function custom_theme_panel_settings($wp_customize)
         $wp_customize,
         "custom_sellery_image2_control",
         array(
-            'label' => __("Upload Image 2", 'designtolive'),
+            'label' => __("Upload Image 2"),
             'section' => 'custom_sellery_section_area',
             'settings' => "custom_sellery_image2_control_setting",
         )
@@ -100,7 +106,7 @@ function custom_theme_panel_settings($wp_customize)
         'default' => "Silver Set",
     ));
     $wp_customize->add_control("custom_sellery_content2_control", array(
-        'label' => __("Provide Item Name 2", 'designtolive'),
+        'label' => __("Provide Item Name 2"),
         'section' => 'custom_sellery_section_area',
         'settings' => "custom_sellery_content2_settings",
         'type' => 'textarea',
@@ -109,11 +115,14 @@ function custom_theme_panel_settings($wp_customize)
         'default' => "75$",
     ));
     $wp_customize->add_control("custom_sellery_price2_control", array(
-        'label' => __("Provide Item Price 2", 'designtolive'),
+        'label' => __("Provide Item Price 2"),
         'section' => 'custom_sellery_section_area',
         'settings' => "custom_sellery_price2_settings",
         'type' => 'textarea',
     ));
+
+
+
 
     // Sellery Item 3
     $wp_customize->add_setting("custom_sellery_image3_control_setting");
@@ -121,7 +130,7 @@ function custom_theme_panel_settings($wp_customize)
         $wp_customize,
         "custom_sellery_image3_control",
         array(
-            'label' => __("Upload Image 3", 'designtolive'),
+            'label' => __("Upload Image 3"),
             'section' => 'custom_sellery_section_area',
             'settings' => "custom_sellery_image3_control_setting",
         )
@@ -130,7 +139,7 @@ function custom_theme_panel_settings($wp_customize)
         'default' => "Nordic Container",
     ));
     $wp_customize->add_control("custom_sellery_content3_control", array(
-        'label' => __("Provide Item Name 3", 'designtolive'),
+        'label' => __("Provide Item Name 3"),
         'section' => 'custom_sellery_section_area',
         'settings' => "custom_sellery_content3_settings",
         'type' => 'textarea',
@@ -139,7 +148,7 @@ function custom_theme_panel_settings($wp_customize)
         'default' => "120$",
     ));
     $wp_customize->add_control("custom_sellery_price3_control", array(
-        'label' => __("Provide Item Price 3", 'designtolive'),
+        'label' => __("Provide Item Price 3"),
         'section' => 'custom_sellery_section_area',
         'settings' => "custom_sellery_price3_settings",
         'type' => 'textarea',
@@ -155,7 +164,7 @@ add_action('customize_register', 'custom_theme_panel_settings');
 
 
 
-// end here
+// end here.......................................................................................................................................
 
 
 
