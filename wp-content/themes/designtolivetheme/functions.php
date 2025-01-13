@@ -508,18 +508,81 @@ function custom_theme_panel_settings($wp_customize)
         'title' => __('Custom Footer Settings'),
     ));
 
-    //social media
-    $wp_customize->add_setting('custom_footer_social_media_settings', array(
-        'default' => 'Social Media',
-    ));
+    //social media add dynamicallly with logo and link
 
-    $wp_customize->add_control('custom_footer_social_media_control', array(
-        'label' => __('Enter Social Media'),
+    //facebook
+    $wp_customize->add_setting('custom_footer_facebook_settings', array(
+        'default' => 'https://www.facebook.com/',
+    ));
+    $wp_customize->add_control('custom_footer_facebook_control', array(
+        'label' => __('Enter Facebook Link'),
         'section' => 'custom_footer_section_area',
-        'settings' => 'custom_footer_social_media_settings',
+        'settings' => 'custom_footer_facebook_settings',
     ));
 
-    //footer section ends here........................................................................................................
+    //twitter
+    $wp_customize->add_setting('custom_footer_twitter_settings', array(
+        'default' => 'https://www.twitter.com/',
+    ));
+    $wp_customize->add_control('custom_footer_twitter_control', array(
+        'label' => __('Enter Twitter Link'),
+        'section' => 'custom_footer_section_area',
+        'settings' => 'custom_footer_twitter_settings',
+    ));
+
+    //instagram
+    $wp_customize->add_setting('custom_footer_instagram_settings', array(
+        'default' => 'https://www.instagram.com/',
+    ));
+    $wp_customize->add_control('custom_footer_instagram_control', array(
+        'label' => __('Enter Instagram Link'),
+        'section' => 'custom_footer_section_area',
+        'settings' => 'custom_footer_instagram_settings',
+    ));
+
+
+    //address
+    $wp_customize->add_setting('custom_footer_address_settings', array(
+        'default' => '02-233 Warszawa',
+    ));
+    $wp_customize->add_control('custom_footer_address_control', array(
+        'label' => __('Enter Address'),
+        'section' => 'custom_footer_section_area',
+        'settings' => 'custom_footer_address_settings',
+    ));
+    //sub address
+    $wp_customize->add_setting('custom_footer_sub_address_settings', array(
+        'default' => 'AI. Jerozolimskie 12',
+    ));
+    $wp_customize->add_control('custom_footer_sub_address_control', array(
+        'label' => __('Enter Sub Address'),
+        'section' => 'custom_footer_section_area',
+        'settings' => 'custom_footer_sub_address_settings',
+    ));
+
+    //email
+    $wp_customize->add_setting('custom_footer_email_settings', array(
+        'default' => 'company@something.com',
+    ));
+    $wp_customize->add_control('custom_footer_email_control', array(
+        'label' => __('Enter Email'),
+        'section' => 'custom_footer_section_area',
+        'settings' => 'custom_footer_email_settings',
+    ));
+
+    //phone
+    $wp_customize->add_setting('custom_footer_phone_settings', array(
+        'default' => '+48 500 500 500',
+    ));
+    $wp_customize->add_control('custom_footer_phone_control', array(
+        'label' => __('Enter Phone Number'),
+        'section' => 'custom_footer_section_area',
+        'settings' => 'custom_footer_phone_settings',
+    ));
+
+    //store regulations,privacy policy,delivery,returns & exchanges,non of them are dynamic
+
+    // footer section ends here........................................................................................................
 }
 
 add_action('customize_register', 'custom_theme_panel_settings');
@@ -556,22 +619,13 @@ function designtolive_nav_menus()
 }
 add_action('init', 'designtolive_nav_menus');
 
-// Theme Support load styles
+// Theme Support load styles and scripts
 function designtolive_theme_load_styles()
 {
     $version = wp_get_theme()->get('Version');
     wp_enqueue_script('designtolive_script', get_template_directory_uri() . '/js/script.js', array(), 'Version', true);
     wp_enqueue_script('designtolive_tailwind', "https://cdn.tailwindcss.com", array(), '1.0.0', true);
     wp_enqueue_script('designtolive_main_css', get_template_directory_uri() . 'style.css', array(), 'Version', true);
-    wp_enqueue_script('designtolive_fontawesome', "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css", array(), '6.7.1', true);
+    wp_enqueue_style('designtolive_fontawesomeeeee', "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css", array(), '6.7.1', 'all');
 }
 add_action('wp_enqueue_scripts', 'designtolive_theme_load_styles');
-
-
-//load scripts
-function designtolive_theme_load_scripts()
-{
-    wp_enqueue_script('designtolive_font', "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css", array(), '6.7.1', true);
-    wp_enqueue_script('designtolive_script', get_template_directory_uri() . '/js/script.js', array(), 'Version', true);
-}
-add_action('wp_enqueue_scripts', 'designtolive_theme_load_scripts');
