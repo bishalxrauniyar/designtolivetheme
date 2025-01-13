@@ -620,6 +620,8 @@ function designtolive_nav_menus()
 add_action('init', 'designtolive_nav_menus');
 
 // Theme Support load styles and scripts
+// for scripts wp_enqueue_script('designtolive_script', get_template_directory_uri() . '/js/script.js', array(), 'Version', true);
+// for styles wp_enqueue_style('designtolive_main_css', get_template_directory_uri() . 'style.css', array(), 'Version', 'all');
 function designtolive_theme_load_styles()
 {
     $version = wp_get_theme()->get('Version');
