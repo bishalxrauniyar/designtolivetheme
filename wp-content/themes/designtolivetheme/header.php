@@ -61,18 +61,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
             <!-- <ul class="flex space-x-6 mr-44">
                 <li>
                     <a
@@ -98,6 +86,9 @@
                     <a href="#" class="text-gray-800"><i class="text-amber-800 fa-solid fa-cart-shopping"></i></a>
                 </li>
             </ul> -->
+
+
+
         </div>
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden flex-col space-y-4 mt-4 md:hidden">

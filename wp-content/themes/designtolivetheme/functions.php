@@ -44,7 +44,7 @@ function custom_theme_panel_settings($wp_customize)
 
 
 
-    // Sellery section
+    // Sellery section........................................................................................................
     $wp_customize->add_section('custom_sellery_section_area', array(
         'title' => __('Custom Sellery Settings'),
     ));
@@ -153,7 +153,375 @@ function custom_theme_panel_settings($wp_customize)
         'settings' => "custom_sellery_price3_settings",
         'type' => 'textarea',
     ));
+
+
+    // Sellery section end........................................................................................................
+
+
+    // new collection section Starts here........................................................................................
+    //title
+    $wp_customize->add_section('custom_new_collection_section_area', array(
+        'title' => __('Custom New Collection Settings'),
+    ));
+    $wp_customize->add_setting('custom_new_collection_title_settings', array(
+        'default' => 'New Collection',
+    ));
+    $wp_customize->add_control('custom_new_collection_title_control', array(
+        'label' => __('Enter Title'),
+        'section' => 'custom_new_collection_section_area',
+        'settings' => 'custom_new_collection_title_settings',
+    ));
+    //content
+    $wp_customize->add_setting('custom_new_collection_content_settings', array(
+        'default' => "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    ));
+    $wp_customize->add_control('custom_new_collection_content_settings', array(
+        'label' => __('Provide Content'),
+        'section' => 'custom_new_collection_section_area',
+        'settings' => 'custom_new_collection_content_settings',
+        'type' => 'textarea',
+    ));
+
+    // Image control
+    //image 1
+    $wp_customize->add_setting("custom_new_collection_image1_control_setting");
+    $wp_customize->add_control(new WP_Customize_Image_Control(
+        $wp_customize,
+        'custom_new_collection_image1_control',
+        array(
+            'label' => __('Upload Image 1'),
+            'section' => 'custom_new_collection_section_area',
+            'settings' => 'custom_new_collection_image1_control_setting',
+        )
+    ));
+    //image 2
+    $wp_customize->add_setting("custom_new_collection_image2_control_setting");
+    $wp_customize->add_control(new WP_Customize_Image_Control(
+        $wp_customize,
+        'custom_new_collection_image2_control',
+        array(
+            'label' => __('Upload Image 2'),
+            'section' => 'custom_new_collection_section_area',
+            'settings' => 'custom_new_collection_image2_control_setting',
+        )
+    ));
+    //image 3
+    $wp_customize->add_setting("custom_new_collection_image3_control_setting");
+    $wp_customize->add_control(new WP_Customize_Image_Control(
+        $wp_customize,
+        'custom_new_collection_image3_control',
+        array(
+            'label' => __('Upload Image 3'),
+            'section' => 'custom_new_collection_section_area',
+            'settings' => 'custom_new_collection_image3_control_setting',
+        )
+    ));
+
+    // new collection section ends here........................................................................................
+
+
+
+
+
+
+
+    //WORKSHOP SECTION STARTS HERE ........................................................................................................
+    $wp_customize->add_section('custom_workshop_section_area', array(
+        'title' => __('Custom Workshop Settings'),
+    ));
+
+    $wp_customize->add_setting('custom_workshop_title_settings', array(
+        'default' => 'Workshop',
+    ));
+
+    $wp_customize->add_control('custom_workshop_title_control', array(
+        'label' => __('Enter Title'),
+        'section' => 'custom_workshop_section_area',
+        'settings' => 'custom_workshop_title_settings',
+    ));
+
+    // Workshop TEXTS
+
+    $wp_customize->add_setting('custom_workshop_content_settings', array(
+        'default' => "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    ));
+    $wp_customize->add_control('custom_workshop_content_settings', array(
+        'label' => __('Provide Content'),
+        'section' => 'custom_workshop_section_area',
+        'settings' => 'custom_workshop_content_settings',
+        'type' => 'textarea',
+    ));
+
+    // Workshop Image
+    $wp_customize->add_setting("custom_workshop_image_control_setting");
+    $wp_customize->add_control(new WP_Customize_Image_Control(
+        $wp_customize,
+        'custom_workshop_image_control',
+        array(
+            'label' => __('Upload Image'),
+            'section' => 'custom_workshop_section_area',
+            'settings' => 'custom_workshop_image_control_setting',
+        )
+    ));
+
+    //WORKSHOP SECTION ENDS HERE ........................................................................................................
+
+
+
+
+
+
+
+
+    //our employee section starts here........................................................................................................ 
+
+    $wp_customize->add_section('custom_our_employee_section_area', array(
+        'title' => __('Custom Our Employee Settings'),
+    ));
+
+    $wp_customize->add_setting('custom_our_employee_title_settings', array(
+        'default' => 'Our Employee',
+    ));
+
+    $wp_customize->add_control('custom_our_employee_title_control', array(
+        'label' => __('Enter Title'),
+        'section' => 'custom_our_employee_section_area',
+        'settings' => 'custom_our_employee_title_settings',
+    ));
+
+    // Employee 1
+    // Image control employee 1
+    $wp_customize->add_setting("custom_our_employee_image1_control_setting");
+    $wp_customize->add_control(new WP_Customize_Image_Control(
+        $wp_customize,
+        "custom_our_employee_image1_control",
+        array(
+            'label' => __("Upload Image 1"),
+            'section' => 'custom_our_employee_section_area',
+            'settings' => "custom_our_employee_image1_control_setting",
+        )
+    ));
+
+    // Employee 1 Name
+    $wp_customize->add_setting("custom_our_employee_name1_settings", array(
+        'default' => "John Doe",
+    ));
+    $wp_customize->add_control("custom_our_employee_name1_control", array(
+        'label' => __("Provide Employee Name 1"),
+        'section' => 'custom_our_employee_section_area',
+        'settings' => "custom_our_employee_name1_settings",
+        'type' => 'textarea',
+    ));
+
+    // Employee 1 Message
+    $wp_customize->add_setting("custom_our_employee_message1_settings", array(
+        'default' => "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    ));
+
+    $wp_customize->add_control("custom_our_employee_message1_control", array(
+        'label' => __("Provide Employee Message 1"),
+        'section' => 'custom_our_employee_section_area',
+        'settings' => "custom_our_employee_message1_settings",
+        'type' => 'textarea',
+    ));
+
+    // Employee 2
+    // Image control employee 2
+    $wp_customize->add_setting("custom_our_employee_image2_control_setting");
+    $wp_customize->add_control(new WP_Customize_Image_Control(
+        $wp_customize,
+        "custom_our_employee_image2_control",
+        array(
+            'label' => __("Upload Image 2"),
+            'section' => 'custom_our_employee_section_area',
+            'settings' => "custom_our_employee_image2_control_setting",
+        )
+    ));
+
+    // Employee 2 Name
+    $wp_customize->add_setting("custom_our_employee_name2_settings", array(
+        'default' => "John Doe",
+    ));
+    $wp_customize->add_control("custom_our_employee_name2_control", array(
+        'label' => __("Provide Employee Name 2"),
+        'section' => 'custom_our_employee_section_area',
+        'settings' => "custom_our_employee_name2_settings",
+        'type' => 'textarea',
+    ));
+
+    // Employee 2 Message
+    $wp_customize->add_setting("custom_our_employee_message2_settings", array(
+        'default' => "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    ));
+
+    $wp_customize->add_control("custom_our_employee_message2_control", array(
+        'label' => __("Provide Employee Message 2"),
+        'section' => 'custom_our_employee_section_area',
+        'settings' => "custom_our_employee_message2_settings",
+        'type' => 'textarea',
+    ));
+
+    // Employee 3
+    // Image control employee 3
+    $wp_customize->add_setting("custom_our_employee_image3_control_setting");
+    $wp_customize->add_control(new WP_Customize_Image_Control(
+        $wp_customize,
+        "custom_our_employee_image3_control",
+        array(
+            'label' => __("Upload Image 3"),
+            'section' => 'custom_our_employee_section_area',
+            'settings' => "custom_our_employee_image3_control_setting",
+        )
+    ));
+
+    // Employee 3 Name
+    $wp_customize->add_setting("custom_our_employee_name3_settings", array(
+        'default' => "John Doe",
+    ));
+    $wp_customize->add_control("custom_our_employee_name3_control", array(
+        'label' => __("Provide Employee Name 3"),
+        'section' => 'custom_our_employee_section_area',
+        'settings' => "custom_our_employee_name3_settings",
+        'type' => 'textarea',
+    ));
+
+    // Employee 3 Message
+    $wp_customize->add_setting("custom_our_employee_message3_settings", array(
+        'default' => "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    ));
+    $wp_customize->add_control("custom_our_employee_message3_control", array(
+        'label' => __("Provide Employee Message 3"),
+        'section' => 'custom_our_employee_section_area',
+        'settings' => "custom_our_employee_message3_settings",
+        'type' => 'textarea',
+    ));
+
+    //our employee section ends here........................................................................................................
+
+
+    //gallery section starts here........................................................................................................
+    $wp_customize->add_section('custom_gallery_section_area', array(
+        'title' => __('Custom Gallery Settings'),
+    ));
+
+    $wp_customize->add_setting('custom_gallery_title_settings', array(
+        'default' => 'Gallery',
+    ));
+
+    $wp_customize->add_control('custom_gallery_title_control', array(
+        'label' => __('Enter Title'),
+        'section' => 'custom_gallery_section_area',
+        'settings' => 'custom_gallery_title_settings',
+    ));
+
+    // Gallery Image 1
+    $wp_customize->add_setting("custom_gallery_image1_control_setting");
+    $wp_customize->add_control(new WP_Customize_Image_Control(
+        $wp_customize,
+        "custom_gallery_image1_control",
+        array(
+            'label' => __("Upload Image 1"),
+            'section' => 'custom_gallery_section_area',
+            'settings' => "custom_gallery_image1_control_setting",
+        )
+    ));
+
+    // Gallery Image 2
+    $wp_customize->add_setting("custom_gallery_image2_control_setting");
+    $wp_customize->add_control(new WP_Customize_Image_Control(
+        $wp_customize,
+        "custom_gallery_image2_control",
+        array(
+            'label' => __("Upload Image 2"),
+            'section' => 'custom_gallery_section_area',
+            'settings' => "custom_gallery_image2_control_setting",
+        )
+    ));
+
+    // Gallery Image 3
+    $wp_customize->add_setting("custom_gallery_image3_control_setting");
+    $wp_customize->add_control(new WP_Customize_Image_Control(
+        $wp_customize,
+        "custom_gallery_image3_control",
+        array(
+            'label' => __("Upload Image 3"),
+            'section' => 'custom_gallery_section_area',
+            'settings' => "custom_gallery_image3_control_setting",
+        )
+    ));
+
+    // Gallery Image 4
+    $wp_customize->add_setting("custom_gallery_image4_control_setting");
+    $wp_customize->add_control(new WP_Customize_Image_Control(
+        $wp_customize,
+        "custom_gallery_image4_control",
+        array(
+            'label' => __("Upload Image 4"),
+            'section' => 'custom_gallery_section_area',
+            'settings' => "custom_gallery_image4_control_setting",
+        )
+    ));
+
+    //Gallary section ends here...............................................................................................................
+
+    //our story section starts here........................................................................................................
+
+    $wp_customize->add_section('custom_our_story_section_area', array(
+        'title' => __('Custom Our Story Settings'),
+    ));
+    //title
+    $wp_customize->add_setting('custom_our_story_title_settings', array(
+        'default' => 'Our Story',
+    ));
+
+    $wp_customize->add_control('custom_our_story_title_control', array(
+        'label' => __('Enter Title'),
+        'section' => 'custom_our_story_section_area',
+        'settings' => 'custom_our_story_title_settings',
+    ));
+
+    //content
+    $wp_customize->add_setting('custom_our_story_content_settings', array(
+        'default' => "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    ));
+    $wp_customize->add_control('custom_our_story_content_settings', array(
+        'label' => __('Provide Content'),
+        'section' => 'custom_our_story_section_area',
+        'settings' => 'custom_our_story_content_settings',
+        'type' => 'textarea',
+    ));
+
+    // Image control
+    $wp_customize->add_setting("custom_our_story_image_control_setting");
+    $wp_customize->add_control(new WP_Customize_Image_Control(
+        $wp_customize,
+        'custom_our_story_image_control',
+        array(
+            'label' => __('Upload Image'),
+            'section' => 'custom_our_story_section_area',
+            'settings' => 'custom_our_story_image_control_setting',
+        )
+    ));
+
+    //footer section starts here........................................................................................................
+    $wp_customize->add_section('custom_footer_section_area', array(
+        'title' => __('Custom Footer Settings'),
+    ));
+
+    //social media
+    $wp_customize->add_setting('custom_footer_social_media_settings', array(
+        'default' => 'Social Media',
+    ));
+
+    $wp_customize->add_control('custom_footer_social_media_control', array(
+        'label' => __('Enter Social Media'),
+        'section' => 'custom_footer_section_area',
+        'settings' => 'custom_footer_social_media_settings',
+    ));
+
+    //footer section ends here........................................................................................................
 }
+
 add_action('customize_register', 'custom_theme_panel_settings');
 
 
@@ -164,7 +532,7 @@ add_action('customize_register', 'custom_theme_panel_settings');
 
 
 
-// end here.......................................................................................................................................
+// end here custume theme customize ........................................................................................
 
 
 
