@@ -4,9 +4,17 @@
 
 function custom_theme_panel_settings($wp_customize)
 {
+    // Create a main panel for custom theme settings
+    $wp_customize->add_panel('custom_theme_panel', array(
+        'title' => __('Custom Theme Settings'),
+        'description' => __('Modify different sections of your theme.'),
+        'priority' => 10,
+    ));
+
     // Title area
     $wp_customize->add_section('custom_banner_section_area', array(
         'title' => __('Custom Banner Settings'),
+        'panel' => 'custom_theme_panel',
     ));
     $wp_customize->add_setting('custom_banner_title_settings', array(
         'default' => 'Design to Live',
@@ -47,11 +55,13 @@ function custom_theme_panel_settings($wp_customize)
     // Sellery section........................................................................................................
     $wp_customize->add_section('custom_sellery_section_area', array(
         'title' => __('Custom Sellery Settings'),
+        'panel' => 'custom_theme_panel',
     ));
 
     // Sellery title
     $wp_customize->add_setting('custom_sellery_title_settings', array(
         'default' => 'Sellery',
+
     ));
     $wp_customize->add_control('custom_sellery_title_control', array(
         'label' => __('Enter Title'),
@@ -155,6 +165,9 @@ function custom_theme_panel_settings($wp_customize)
     ));
 
 
+
+
+
     // Sellery section end........................................................................................................
 
 
@@ -162,6 +175,7 @@ function custom_theme_panel_settings($wp_customize)
     //title
     $wp_customize->add_section('custom_new_collection_section_area', array(
         'title' => __('Custom New Collection Settings'),
+        'panel' => 'custom_theme_panel',
     ));
     $wp_customize->add_setting('custom_new_collection_title_settings', array(
         'default' => 'New Collection',
@@ -228,6 +242,7 @@ function custom_theme_panel_settings($wp_customize)
     //WORKSHOP SECTION STARTS HERE ........................................................................................................
     $wp_customize->add_section('custom_workshop_section_area', array(
         'title' => __('Custom Workshop Settings'),
+        'panel' => 'custom_theme_panel',
     ));
 
     $wp_customize->add_setting('custom_workshop_title_settings', array(
@@ -277,6 +292,7 @@ function custom_theme_panel_settings($wp_customize)
 
     $wp_customize->add_section('custom_our_employee_section_area', array(
         'title' => __('Custom Our Employee Settings'),
+        'panel' => 'custom_theme_panel',
     ));
 
     $wp_customize->add_setting('custom_our_employee_title_settings', array(
@@ -402,6 +418,7 @@ function custom_theme_panel_settings($wp_customize)
     //gallery section starts here........................................................................................................
     $wp_customize->add_section('custom_gallery_section_area', array(
         'title' => __('Custom Gallery Settings'),
+        'panel' => 'custom_theme_panel',
     ));
 
     $wp_customize->add_setting('custom_gallery_title_settings', array(
@@ -468,6 +485,7 @@ function custom_theme_panel_settings($wp_customize)
 
     $wp_customize->add_section('custom_our_story_section_area', array(
         'title' => __('Custom Our Story Settings'),
+        'panel' => 'custom_theme_panel',
     ));
     //title
     $wp_customize->add_setting('custom_our_story_title_settings', array(
@@ -506,6 +524,7 @@ function custom_theme_panel_settings($wp_customize)
     //footer section starts here........................................................................................................
     $wp_customize->add_section('custom_footer_section_area', array(
         'title' => __('Custom Footer Settings'),
+        'panel' => 'custom_theme_panel',
     ));
 
     //social media add dynamicallly with logo and link
@@ -584,7 +603,6 @@ function custom_theme_panel_settings($wp_customize)
 
     // footer section ends here........................................................................................................
 }
-
 add_action('customize_register', 'custom_theme_panel_settings');
 
 
@@ -631,3 +649,12 @@ function designtolive_theme_load_styles()
     wp_enqueue_style('designtolive_fontawesomeeeee', "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css", array(), '6.7.1', 'all');
 }
 add_action('wp_enqueue_scripts', 'designtolive_theme_load_styles');
+
+//activate plugin
+function activate_mytheme_required_plugins()
+{
+    if (!is_plugin_active('kirki/kirki.php')) {
+        activate_plugin('kirki/kirki.php');
+    }
+}
+add_action('after_setup_theme', 'activate_mytheme_required_plugins');

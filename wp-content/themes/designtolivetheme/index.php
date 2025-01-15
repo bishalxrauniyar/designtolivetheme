@@ -178,7 +178,7 @@ get_header();
                 src="<?php echo get_theme_mod('custom_our_employee_image2_control_setting') ?>"
                 alt="card image"
                 class="w-[100px] h-[100px] rounded-full" />
-            <p class="text-xl font-semibold"><?php echo get_theme_mod('custom_our_employee_name2_control') ?></p>
+            <p class="text-xl font-semibold"><?php echo get_theme_mod('custom_our_employee_name2_settings') ?></p>
             <p class="text-center justify-center md:text-xl text-sm px-8">
                 <?php echo get_theme_mod('custom_our_employee_message2_settings'); ?>
             </p>
@@ -189,7 +189,7 @@ get_header();
                 src="<?php echo get_theme_mod('custom_our_employee_image3_control_setting') ?>"
                 alt="card image"
                 class="w-[100px] h-[100px] rounded-full" />
-            <p class="text-xl font-semibold"><?php echo get_theme_mod('custom_our_employee_name3_control') ?></p>
+            <p class="text-xl font-semibold"><?php echo get_theme_mod('custom_our_employee_name3_settings') ?></p>
             <p class="text-center justify-center md:text-xl text-sm px-8">
                 <?php echo get_theme_mod('custom_our_employee_message3_settings'); ?>
             </p>
