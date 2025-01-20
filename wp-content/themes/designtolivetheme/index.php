@@ -3,7 +3,7 @@ get_header();
 ?>
 
 <!-- Ceramic  section -->
-<div
+<div id="sellery"
     class="relative md:h-screen h-[500px] bg-slate-100 flex justify-center items-center md:mt-0 md:mb-0 md:p-2">
     <img
         src="<?php echo get_theme_mod('custom_banner_image_control_setting') ?>"
