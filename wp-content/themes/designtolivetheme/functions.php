@@ -1,5 +1,5 @@
 <?php
-//custome theme customizers......................................................................................................................
+//custome theme customizers..................................................................................................................
 
 
 function custom_theme_panel_settings($wp_customize)
@@ -649,12 +649,3 @@ function designtolive_theme_load_styles()
     wp_enqueue_style('designtolive_fontawesomeeeee', "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css", array(), '6.7.1', 'all');
 }
 add_action('wp_enqueue_scripts', 'designtolive_theme_load_styles');
-
-//activate plugin
-function activate_mytheme_required_plugins()
-{
-    if (!is_plugin_active('kirki/kirki.php')) {
-        activate_plugin('kirki/kirki.php');
-    }
-}
-add_action('after_setup_theme', 'activate_mytheme_required_plugins');
