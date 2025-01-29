@@ -1,6 +1,6 @@
 <?php
 get_header();
-die('sfsdfsdfds');
+// die('sfsdfsdfds');
 ?>
 <!DOCTYPE html>
 <html lang="en">
