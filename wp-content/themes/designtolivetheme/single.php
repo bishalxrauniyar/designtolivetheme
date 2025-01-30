@@ -2,6 +2,7 @@
 <?php
 get_header(); // call the header
 the_post();
+
 ?>
 <!-- single post  -->
 <div>

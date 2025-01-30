@@ -1,5 +1,6 @@
 <?php
 get_header();
+
 ?>
 
 <!-- Ceramic  section -->

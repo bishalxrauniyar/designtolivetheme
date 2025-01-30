@@ -93,3 +93,63 @@ header.php ma header ko part rakney , ani call garna lai get_header(); use garne
 footer.php ma header ko part rakney , ani call garna lai get_footer(); use garney
 <?php wp_footer(); ?> footer.php ko </body> aagadi call garnu parxa.
 -->
+
+<!-- desktop menu
+
+
+            <!-- <ul class="flex space-x-6 mr-44">
+                <li>
+                    <a
+                        href="#"
+                        class="text-black p-4 hover:border-b-2 hover:border-amber-800">SHOP</a>
+                </li>
+                <li>
+                    <a
+                        href="#"
+                        class="text-black p-4 hover:border-b-2 hover:border-amber-800">WORKSHOP</a>
+                </li>
+                <li>
+                    <a
+                        href="#"
+                        class="text-black p-4 hover:border-b-2 hover:border-amber-800">BLOG</a>
+                </li>
+                <li>
+                    <a
+                        href="#"
+                        class="text-black p-4 hover:border-b-2 hover:border-amber-800">CONTACT</a>
+                </li>
+                <li>
+                    <a href="#" class="text-gray-800"><i class="text-amber-800 fa-solid fa-cart-shopping"></i></a>
+                </li>
+            </ul> -->
+
+-->
+
+<!-- mobile nav menu  -->
+ <!-- <ul
+                class="py-2 text-sm text-black dark:text-amber-800"
+                aria-labelledby="dropdownDefaultButton">
+                <li>
+                    <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-amber-600 dark:hover:text-white">SHOP</a>
+                </li>
+                <li>
+                    <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-amber-600 dark:hover:text-white">WORKSHOP</a>
+                </li>
+                <li>
+                    <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-amber-600 dark:hover:text-white">BLOG</a>
+                </li>
+                <li>
+                    <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-amber-600 dark:hover:text-white">CONTACT</a>
+                </li>
+                <li>
+                    <a href="#" class="block px-4 py-2 text-gray-800"><i class="text-amber-800 fa-solid fa-cart-shopping"></i></a>
+                </li>
+            </ul> -->
