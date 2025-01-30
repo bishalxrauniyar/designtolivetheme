@@ -17,7 +17,7 @@ $homeurl = get_permalink();
         <!-- Mobile Menu Button -->
         <div class="flex justify-between items-center md:hidden">
             <a href="#" class="text-2xl text-amber-700"><i class="fa-solid fa-bars" id="menu-toggle"></i></a>
-            <a href="#" class="text-black text-2xl">
+            <a href="http://designtolivetheme.local/" class="text-black text-2xl">
 
                 <?php
                 if (function_exists('the_custom_logo')) {
@@ -35,7 +35,7 @@ $homeurl = get_permalink();
         <!-- Desktop Menu -->
         <div
             class="container mx-auto hidden md:flex justify-between items-center">
-            <a href="<?php $homeurl ?>" class="text-black text-2xl ml-44">
+            <a href="http://designtolivetheme.local/" class="text-black text-2xl ml-44">
                 <?php
                 if (function_exists('the_custom_logo')) {
                     $custom_logo_id = get_theme_mod('custom_logo');
