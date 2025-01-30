@@ -9,12 +9,13 @@ Requires PHP: 7.2
 Version: 1.0
 Text Domain: bishal
 */
+
 .comment-list {
     list-style-type: none;
     padding: 0;
 }
 
-.comment-list ol {
+.comment-list ul {
     list-style-type: decimal;
 }
 

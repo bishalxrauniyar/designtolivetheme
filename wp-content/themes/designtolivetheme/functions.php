@@ -645,7 +645,7 @@ function designtolive_theme_load_styles()
     $version = wp_get_theme()->get('Version');
     wp_enqueue_script('designtolive_script', get_template_directory_uri() . '/js/script.js', array(), 'Version', true);
     wp_enqueue_script('designtolive_tailwind', "https://cdn.tailwindcss.com", array(), '1.0.0', true);
-    wp_enqueue_script('designtolive_main_css', get_template_directory_uri() . 'style.css', array(), 'Version', true);
+    wp_enqueue_script('designtolive_main_css', get_template_directory_uri() . '/style.css', array(), 'Version', true);
     wp_enqueue_style('designtolive_fontawesomeeeee', "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css", array(), '6.7.1', 'all');
 }
 add_action('wp_enqueue_scripts', 'designtolive_theme_load_styles');

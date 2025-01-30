@@ -4,11 +4,10 @@ if (have_comments()) {
     <ul class="comment-list">
         <?php
         wp_list_comments(array(
-            'avatar_size' => 40,
-            'max_depth' => 5,
-            'style' => 'ol',
-            'short_ping' => true,
-            'type' => 'comment',
+            'avatar_size' => 50, // size of the avatar picture picture
+            'max_depth' => 5, // maximum depth of the comments
+            'style' => 'li', // style of the comments
+            'type' => 'comment', // type of the comments
         ));
         ?>
     </ul>
