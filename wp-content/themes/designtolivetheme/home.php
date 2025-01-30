@@ -1,5 +1,5 @@
 <!-- blog post are to be created in the home .php page as blog post template Hierarchy goes from home.php to index.php -->
-<!-- blog listing page -->
+<!-- blogs listing page -->
 <?php
 get_header(); //calling the header.php file
 ?>

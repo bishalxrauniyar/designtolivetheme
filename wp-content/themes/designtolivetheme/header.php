@@ -45,9 +45,6 @@ $homeurl = get_permalink();
 
                 <img src="<?php echo $logo[0]; ?>" alt="Logo" />
             </a>
-
-
-
             <?php
             wp_nav_menu(
                 array(
@@ -60,10 +57,6 @@ $homeurl = get_permalink();
                 )
             )
             ?>
-
-
-
-
         </div>
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden flex-col space-y-4 mt-4 md:hidden">

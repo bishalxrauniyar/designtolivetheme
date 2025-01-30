@@ -1,4 +1,4 @@
-<!-- // single post page template -->
+<!-- // blog single post page template -->
 <?php
 get_header(); // call the header
 the_post();
