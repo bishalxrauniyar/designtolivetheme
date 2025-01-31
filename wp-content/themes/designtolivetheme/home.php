@@ -33,3 +33,41 @@ if (have_posts()) :
 <?php
 get_footer(); //calling the footer.php file
 ?>
+<style>
+    .project-meta {
+        font-style: italic;
+        color: #666;
+    }
+
+    h2 {
+        font-size: 2rem;
+        color: #333;
+    }
+
+
+    a:hover h2 {
+        color: #0073aa;
+    }
+
+    .post-thumbnail {
+        max-width: 100%;
+        height: auto;
+    }
+
+    body {
+        display: flexbox;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        font-size: 2em;
+        margin-bottom: 0.5em;
+    }
+
+    p {
+        margin-bottom: 1em;
+    }
+</style>
